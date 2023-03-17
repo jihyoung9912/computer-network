@@ -1,4 +1,3 @@
-# 1일차 0306 Network 기본
 
 - **Network**
     - 컴퓨터끼리 서로 정보를 주고 받을 수 있도록 연결된 통신망
@@ -38,7 +37,8 @@
     - 컴퓨터 네트워크에서 데이터를 주고 받을 때 수행되는 절차 규약 관례
     - it defines the format, order of messages sent 등
     
-    ![Untitled](1%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%200306%20Network%20%E1%84%80%E1%85%B5%E1%84%87%E1%85%A9%E1%86%AB%20110f711b99ec4309988955519cd6a600/Untitled.png)
+    ![imgae](https://user-images.githubusercontent.com/102154146/225836854-99f12fa7-4b8e-41a8-ad26-e818e822730b.png)
+
     
 - **Internet Standards**
     - Protocol을 정의하는 기준 규칙
@@ -93,10 +93,10 @@
         - 그 길이를 L bits라고 부름
     - packet이 access network의 link로 전환(도착)되기까지 걸리는 시간을 transmission rate (=link capacity, =link bandwidth) 라고 하며 R bit/sec 단위를 사용함 1초당 몇 bit를 보낼 수 있느냐.
     
-    ![Untitled](1%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%200306%20Network%20%E1%84%80%E1%85%B5%E1%84%87%E1%85%A9%E1%86%AB%20110f711b99ec4309988955519cd6a600/Untitled%201.png)
-    
-    ![Untitled](1%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%200306%20Network%20%E1%84%80%E1%85%B5%E1%84%87%E1%85%A9%E1%86%AB%20110f711b99ec4309988955519cd6a600/Untitled%202.png)
-    
+    ![Untitled](https://user-images.githubusercontent.com/102154146/225836657-9e19c481-66e2-4cd6-8c9e-fc833944255e.png)
+
+    ![Untitled](https://user-images.githubusercontent.com/102154146/225836674-26725164-9287-4d0b-8a9f-46b413f40b5c.png)
+
     - ***Packet Transmission Delay - 하나의 패킷을 전부 전송하는데 얼마나 걸리느냐.***
 
 - Physical media
