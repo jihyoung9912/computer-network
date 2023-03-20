@@ -1,4 +1,4 @@
-# 2일차 0308 Network Core
+# Network Core
 
 - **Network Core**
     - mesh of interconnected routers
