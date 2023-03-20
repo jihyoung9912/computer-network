@@ -28,7 +28,7 @@
         - **Forwarding**
             - Router 내부에서 Router 입력 포트에서 Router 출력 포트로 Packet을 이동시키는 것
             - 라우터 내부에서만 일어나기에 Local Action
-    - Store-and-Forwar의 대안 Circuit Switching
+    - Store-and-Forward의 대안 Circuit Switching
         - source에서 destination 까지의 resource를 미리 할당시켜 놓고 미리 신호가 되어 있는 메세지들이 즉시 이동하는 것.
         - 해당 경로는 공유될 수 없음
         - 마치 source - destination 까지 선을 하나 만들어 놓은 것과 같음 (사용하지 않아도 사용할 수 없음 비효율적)
