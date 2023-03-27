@@ -161,3 +161,4 @@
         - SSL socket API
             - cleartext passwords sent into socket traverse Internet encrypted
             - 어플리케이션이 암호를 SSL로 보내주면 SSL이 암호화하여 TCP로 전달하는 것.
+
