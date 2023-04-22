@@ -1,0 +1,53 @@
+# 05_Protocol_Layers
+
+- **Protocol Layers**
+    - Networks are complex, with many pieces
+    - 너무 복잡하기에 Network를 Layer로 나누어 계층별 관계들을 찾아내는 과정
+        - 편리한 업데이트 유지보수
+    - Why Layering?
+        - Approach to designing/discussing complex systems
+            - explicit structure allows identification, relationship of system’s pieces
+                - layered reference model for discussion
+                - 시스템의 복잡성을 다루기 위한 접근 방식. 레이어 방식을 통해 명시적인 구조화.
+                - 시스템을 이루는 요소 식별, 관계 파악.
+            - modularization eases maintenance, updating of system
+                - change in layer’s service implementation: transparent to rest of system
+                - change in gate procedure doesn’t affect rest of sytem
+                - 각 레이어는 서로에게 영향을 주지 않도록 분리되어 있기에 특정 레이어에서의 변경이 다른 시스템에 영향을 주지 않아 복잡한 시스템을 효과적으로 설계 가능.
+    - **Layered** **Internet Protocol Stack**
+        - Application
+            - supporting network applications (HTTP, FTP, SMTP)
+        - Transport
+            - process-process data transfer (TCP, UDP)
+            - 프로세스: 실행이 되고 있는 프로그램.
+        - Network
+            - routing of datagrams(packets) from source to destination (IP, routing protocols)
+        - Link
+            - data transfer between neighboring network elements (Ethernet, 802.11, ppp)
+            - 물리적 링크로 인접해있는 Node간 Data transfer
+        - Physical
+            - bits on the wire
+            - 물리적으로 bit를 전달하는 계층
+    - ISO/OSI reference mdoel (실질적 표준 Presentation, Session 추가)
+        
+        
+        - Presentation
+            - allow applications to interpret meaning of data (encryption, compression)
+            - data의 meaning을 해석
+        - Session
+            - synchronization, checkpointing, recovery of data exchange
+            - 동기, 데이터를 주고 받다 끊어지는 경우
+        - 상횡마다 필요한 경우가 있으며, 만약 필요하다면, application layer에 합쳐 구현
+    - **각각의 계층에서는 본인의 할 일만을 분업적으로 진행하며 상호간의 영향은 최소화.**
+    
+    - **Encapsulation (캡슐화)**
+        - 각각 계층에서 아래 계층으로 보낼 때 해당 계층에 필요한 데이터를 Header에 붙여서 내려 보내는 과정 각 계층마다 필요한 Header가 다름.
+        - M → Message
+            - Application exchanges messages to implement some application service using services of transport layer
+        - Ht M → Segment
+            - transport-layer protocol encapsulates application-layer message, M, with transport layer-layer header Ht to create a transport-layer segment
+                - Ht used by transport layer protocol to implement its service
+        - Hn Ht M → datagram
+            - Network-layer protocol encapsulates transport-layer segment [Ht | M] with network layer-layer header Hn to create a network-layer datagram
+                - Hn used by network layer protocol to implement its service
+        - Hl Hn Ht M → frame
