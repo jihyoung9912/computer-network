@@ -1,22 +1,24 @@
+# 01_Network_Fundamental
+
 - **Network**
     - 컴퓨터끼리 서로 정보를 주고 받을 수 있도록 연결된 통신망
+    - Collection of devices, routers, links: managed by an organizaion
 - **Internet**
-    - Billions of connected computing devices
     - 여러 통신망을 하나로 연결하는 것
     - Internet을 보는 두 가지 관점 (nuts and bolts, service view)
 - **nuts and bolts view**
     - 구성요소로 인터넷을 정의하는 관점
-    - billions of connected computing devices
-    - Internet: network of networks
-    - 이렇게 연결된 네트워크에서 모든 장치들을 (connected computing devices) host or end system 이라고 하며, 해당 host가 network apps를 실행하고 있다.
+    - Billions of connected computing devices
+    - Internet: **network of networks**
+        - Interconnected ISPs
+            - **ISP**는 **Internet Service Provider, end host들에게 인터넷 접속점을 제공해주는 역할.**
+    - 이렇게 연결된 네트워크에서 모든 장치들을 (connected computing devices) **host** or **end** **system** 이라고 하며, 해당 host가 network apps를 실행하고 있다.
         - end system은 communication link(통신 링크)와 packet switch를 통해 네트워크로 연결됨
         - 이 연결은 동축케이블, 광케이블과 같은 물리적 매체를 통해 이뤄지며 데이터 전송의 속도를 따지는 것을 transmission (전송률) 단위는 bps (bit per second)
         - transmission rate = bandwidth
             - link의 성능
         - Packet Switches
             - Router or Switches 를 통해 Forward packets
-    - interconnected ISPs
-        - **ISP**는 **Internet Service Provider, end host들에게 인터넷 접속점을 제공해주는 역할.**
     1. 수백만개의 연결된 컴퓨팅 장치들이 존재하고 컴퓨팅 장치에서는 **host** 또는 **end system** 에 네트워크 어플리케이션이 실행되고 있다.
     2. 이 장치들은 **communication links**라 불리는 **fiber, copper, radio, satelite**로 통하여 데이터를 전송한다.
     3. 이때 데이터들은 전송속도를 의미하는 **bandwidth**를 bit per second 단위로 표기할 수 있다.
@@ -32,12 +34,11 @@
     - provides programming interface to distributed applications (API를 제공해줘야 함)
     - 어플리케이션에게 코딩 가능한 socket interface 제공, end system에서 end system으로 전송 및 수신 가능한 distributted application 제작을 돕는다
 - **Protocol**
+    - Protocols define that format, order of messages sent and received among network entities, and actions taken on message transmission, receipt
     - control, sending, receiving of messages
     - 컴퓨터 네트워크에서 데이터를 주고 받을 때 수행되는 절차 규약 관례
     - it defines the format, order of messages sent 등
     
-    ![imgae](https://user-images.githubusercontent.com/102154146/225836854-99f12fa7-4b8e-41a8-ad26-e818e822730b.png)
-
     
 - **Internet Standards**
     - Protocol을 정의하는 기준 규칙
@@ -51,26 +52,38 @@
 - **Network Edge**
     - hosts = clients and servers로 구성
     - servers often in data centers
+    
+    
 - **Access Networks, Physical media**
     - 유선 또는 무선의 communications link를 가지는 네트워크
     - Network Edge와 Network Core를 연결시켜 주는 것 (LAN)
+    
+    
 - **Network core**
     - interconnected routers
     - 라우터끼리 연결되어 있는 것
     - network of networks
     - Mesh 형태로 연결된 routers의 연결 집합.
+    
+    
+- How to connect end systems to edge router? → two way Cabe, Wireless
 - **Access network : Cable Network**
     - End System과 Edge Router의 연결 역할, 다양한 종류
     - cable-based access
-        - Frequency division multiplexing
+        - **Frequency division multiplexing (FDM)**
+            - different channels transmitted in different frequency bands
             - 전체 대역폭을 주파수로 나눠 여러개의 정보를 쪼개 동시에 보냄.
             - 서로 다른 chanel들이 서로 다른 대역폭에서 전송되는 방식 (주파수)
             - 대역폭이 크면 담을 수 있는 데이터가 많아짐
-            - Shared 회선을 사용 —> HFC (Hybrid Fiber Coax) 광동축 혼합망
-    - Digital Subscriber Line (DSL)
-        - 인터넷 선 보급 전 존재했던 dedicated 전화선 사용 방식
-        - 전화 선이 모이는 central office의 DSLAM이 전화와 인터넷을 구분하여 telephone network와 ISP network로 전달해주는 multiplexer 역할을 함
-        - 빠르고 편리한 설치, 전화선을 통해 구성한 네트워크기에 낮은 성능
+        - **Hybrid Fiber Coax (HFC 광동축 혼합망)**
+            - network of cable, fiber attaches homes to ISP router
+            - homes share access network to cable headend
+        - 
+        - **Digital Subscriber Line (DSL)**
+            - 인터넷 선 보급 전 존재했던 dedicated 전화선 사용 방식 (기존 전화 선 보급은 잘 되어 있었기에.)
+            - 전화 선이 모이는 central office의 DSLAM이 전화와 인터넷을 구분하여 telephone network와 ISP network로 전달해주는 multiplexer 역할을 함
+            - 전화 선을 두개의 주파수로 분리, data over DSL phone line goes to Internet, voice over DSL phone line goes to telephone net
+            - 빠르고 편리한 설치, 전화선을 통해 구성한 네트워크기에 낮은 성능
     - Home Networks
         - wireless access point —> 공유기.
         - 여러 장치들이 이 곳에 연결할 수 있다.
@@ -80,22 +93,32 @@
     - Data Center Networks
         - 고대역 메모리 링크
 - **Access network : Wireless**
-    - Shared wireless access network
+    - Shared wireless access network connects end system to router
     - 전파가 공기 매질을 통해 퍼져 연결하는 방법이며, 모두가 같은 전파 신호를 감지할 수 있음
     - 같은 공유기를 공유할 때, 한 기기가 전파를 보내고 있으면 다른 기기는 전파를 보낼 수 없음
-        - wireless LANs, Wide-Area wireless
+    - Wireless local area networks (WLANs)
+        - typically within or around building
+    - Wide-area cellular access networks
+        - provided by mobile, celluar network operator
+        - using 3G, 4G… to provide network connection among much larger area
+    - Enterprise networks
+        - companies, universities, etc.
+        - mix of wired, wireless link. very fast
+    - Data center networks
+        - high-bandwidth links connect hundreds to thousands of servers together and to Internet
 
 - **Host = End systems**
+    - takes application message
+    - breaks into smaller chunks, known as packets, of length L bits
+    - transmits packet into access network at transmission rate R
+        - **link transmission rate, link capacity, link bandwidth**
     - application의 message를 받고, 이를 보내야 함
     - sends packets of data / 데이터의 packet(chunk)를 보내는 주체
     - 데이터를 packets이라고 부르는 smaller chunks로 쪼개서 전송
         - 그 길이를 L bits라고 부름
     - packet이 access network의 link로 전환(도착)되기까지 걸리는 시간을 transmission rate (=link capacity, =link bandwidth) 라고 하며 R bit/sec 단위를 사용함 1초당 몇 bit를 보낼 수 있느냐.
     
-    ![Untitled](https://user-images.githubusercontent.com/102154146/225836657-9e19c481-66e2-4cd6-8c9e-fc833944255e.png)
-
-    ![Untitled](https://user-images.githubusercontent.com/102154146/225836674-26725164-9287-4d0b-8a9f-46b413f40b5c.png)
-
+    
     - ***Packet Transmission Delay - 하나의 패킷을 전부 전송하는데 얼마나 걸리느냐.***
 
 - Physical media
