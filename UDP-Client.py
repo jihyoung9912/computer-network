@@ -1,5 +1,5 @@
 from socket import *
-serverName = 'hostname'
+serverName = "127.0.0.1"
 serverPort = 12000
 
 # Make Socket
