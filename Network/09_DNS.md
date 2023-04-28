@@ -1,4 +1,4 @@
-# 06_DNS
+# 09_DNS
 
 - People
     - many identifiers : SSN, name, passports…
