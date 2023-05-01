@@ -5,6 +5,7 @@ serverPort = 12000
 # TCP is SOCK_STREAM, UDP is SOCK_DGRAM
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))
+
 # Server connect가 안될 때의 예외처리 추가 필요
 
 sentence = input('Input lowercase sentence: ')
