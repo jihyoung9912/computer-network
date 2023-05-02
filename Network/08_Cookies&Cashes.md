@@ -38,7 +38,6 @@
         - proxy server가 한번 보낸 data는 cache로 저장하기 때문에 가능
         - origin이 멀고 proxy가 가까우면 좋은 전략이 됨.
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/41606111-1d7c-4d30-b47f-c6b20731564b/Untitled.png)
         
     - cache acts as both client and server
     - typically cache is installed by ISP (Internet Service Provider)
