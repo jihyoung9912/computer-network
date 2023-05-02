@@ -1,4 +1,4 @@
-# 10_P2P_Applications
+# 11_P2P_Applications
 
 - Pure P2P Architecture
     - no always-on server (peer들 사이 통신)
