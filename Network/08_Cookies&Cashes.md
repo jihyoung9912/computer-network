@@ -32,7 +32,7 @@
 - **Web caches (proxy server)**
     - goal: satisfy client request without involving origin server
         - origin server의 관여 없이 request 처리 방식 (cache: origin data copy data)
-    - browser sends all HTTP requests to chace
+    - browser sends all HTTP requests to cache
         - object in cache: cache returns object
         - else cache requests object from origin server, then returns object to client
         - proxy server가 한번 보낸 data는 cache로 저장하기 때문에 가능
