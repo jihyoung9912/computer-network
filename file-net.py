@@ -28,7 +28,7 @@ def put_file(con, filename, data):
 
 
 def ls_file(con, ext):
-    files = [f for f in os.listdir() if f.endswith(ext)]  # 현재 디렉토리에서 확장자가 ext인 파일 목록을 가져옵니다.
+    files = [f for f in os.listdir() if f.endswith(ext)]
     for filename in files:
         con.sendall(f"{filename}\r\n".encode())
 
