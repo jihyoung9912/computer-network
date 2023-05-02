@@ -1,4 +1,4 @@
-# 12_CDNS
+# 13_CDNS
 
 - Content Distribution Networks
 - CDN: stores copies of content at CDN nodes
