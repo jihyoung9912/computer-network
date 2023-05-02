@@ -1,4 +1,4 @@
-# 08_SMTP_POP3,IMAP
+# 09_SMTP_POP3,IMAP
 
 - Electronic mail 동작
     
