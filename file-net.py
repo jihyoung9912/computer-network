@@ -44,7 +44,8 @@ def handle_connection(ans, con, temp):
 
 
 if __name__ == '__main__':
-    print("Hello, Success!!")
+    print("Student-ID: 20180084")
+    print("Name: JiHyung Kim")
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((HOST, PORT))
