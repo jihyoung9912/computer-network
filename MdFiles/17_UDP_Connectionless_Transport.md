@@ -35,4 +35,3 @@
         - check if computed checksum equals checksum field value
             - No - error detected
             - YES - no error detected, but maybe errors -later
-            - 
